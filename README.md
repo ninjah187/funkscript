@@ -1,0 +1,3 @@
+# funkscript
+
+JS made functional.
