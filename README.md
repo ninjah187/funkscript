@@ -47,7 +47,7 @@ Lazy sequences:
 === FunkScript ===
 ==================
 
-0..3
+0..4
 |> filter x => x < 3
 |> map x => x + 1
 |> print
@@ -68,13 +68,19 @@ function pipe(value, functions) {
 
 function filter(predicate) {
   return function (items) {
-    return items.filter(predicate);
+    for (const item of items) {
+      if (predicate(items)) {
+        yield item;
+      }
+    }
   };
 }
 
 function map(mapper) {
   return function (items) {
-    return items.map(mapper);
+    for (const item of items) {
+      yield mapper(item);
+    }
   };
 }
 
