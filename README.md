@@ -7,6 +7,42 @@ Work in progress.
 Some example snippets:
 
 ```
+Variable definition:
+
+==================
+=== FunkScript ===
+==================
+
+let x = 5
+
+==================
+=== JavaScript ===
+==================
+
+function x() {
+  return 5;
+}
+```
+
+```
+Function definition:
+
+==================
+=== FunkScript ===
+==================
+
+let f x = x + 1
+
+==================
+=== JavaScript ===
+==================
+
+function f(x) {
+  return x + 1;
+}
+```
+
+```
 Function definition and call:
 
 ==================
